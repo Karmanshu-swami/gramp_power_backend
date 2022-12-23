@@ -1,0 +1,63 @@
+// Home route
+###
+GET http://localhost:5000/api/
+
+// Registration route
+###
+POST http://localhost:5000/api/reg
+Content-Type: application/json
+
+{
+    "username" : "admin",
+    "password" : "admin123"
+}
+
+// Login route
+###
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+    "username" : "admin",
+    "password" : "admin123"
+}
+
+
+// Users route
+###
+GET http://localhost:5000/api/getusers
+
+
+// Get all device data route
+###
+GET http://localhost:5000/api/getdevicesdata
+
+
+// Insert device data route
+###
+POST http://localhost:5000/api/adddevice
+Content-Type: application/json
+
+{
+    "deviceId" : "GMP100003",
+    "deviceName" : "Device 3",
+    "deviceStatus": "Down"
+}
+
+
+// Insert device detail route
+###
+POST http://localhost:5000/api/adddevicedetail
+Content-Type: application/json
+
+{
+    "deviceId" : "GMP100001",
+    "deviceCurrent" : 58,
+    "deviceVoltage": 13.64654864,
+    "deviceConsumption": 95.465846,
+    "lastDataPoint": "88"
+}
+
+// Single device data
+###
+GET http://localhost:5000/api/getsingledata/GMP100001
